@@ -3,15 +3,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: path.join(__dirname, "src", "index.js"),
-  mode:'development',
-  output: {
-    path:path.resolve(__dirname, "dist"),
-  },
+    entry: './src/index.jsx',
+    mode: 'development',
+    output: {
+        publicPath: '/',
+      },
   module: {
     rules: [
       {
-        test: /\.?js$/,
+        test: /\.js$|jsx/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -39,6 +39,9 @@ module.exports = {
       template: path.join(__dirname, "public", "index.html"),
     }),
   ],
+  resolve: {
+    extensions: ['.jsx', '.js'],
+  },
   devServer: {
     static: path.join(__dirname, 'build'),
     historyApiFallback: true,
