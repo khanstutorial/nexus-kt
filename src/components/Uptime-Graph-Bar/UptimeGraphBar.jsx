@@ -1,16 +1,29 @@
-import React from 'react'
-import { Typography, Box } from '@mui/material'
-import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
+import React from 'react';
 
-
-const UptimeGraphBar = (props) => {
+const UptimeGraphBar = props => {
   return (
-    // <HorizontalRuleIcon fontSize="large" sx={{transform: 'rotate(90deg)', color:'#2cfa2c', fontSize: 50, float:'left'}}>
+    <>
+      {props.value == 1 ? (
+        <div
+          style={{
+            borderLeft: '6px solid #2cfa2c',
+            height: '40px',
+            float: 'left',
+            paddingRight: '2px',
+          }}
+        ></div>
+      ) : (
+        <div
+          style={{
+            borderLeft: '6px solid red',
+            height: '40px',
+            float: 'left',
+            paddingRight: '2px',
+          }}
+        ></div>
+      )}
+    </>
+  );
+};
 
-    // </HorizontalRuleIcon>
-    <div style={{borderLeft: '6px solid red', height: '40px', float:'left', paddingRight:'2px'}}>
-    </div>
-  )
-}
-
-export default UptimeGraphBar
+export default UptimeGraphBar;
