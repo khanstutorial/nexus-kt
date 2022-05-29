@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+    //   "experimentalDecorators": true,
+    //   "baseUrl": "./"
+    },
+    // "exclude": [
+    //     "node_modules",
+    //     "dist",
+    //     "functions/node_modules"
+    // ]
+}
