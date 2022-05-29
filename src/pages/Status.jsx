@@ -1,11 +1,8 @@
 import React from 'react';
 import moment from 'moment';
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Paper from '@mui/material/Paper';
 import { Card } from '@mui/material';
-import DisplayStatus from '../features/DisplayStatus';
 import CircleIcon from '@mui/icons-material/Circle';
 import { Typography } from '@mui/material';
 import SERVICES from './../constants/index';
@@ -18,10 +15,6 @@ const Status = () => {
     1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0,
     1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0,
   ];
-
-  function x(num) {
-    return num * 5;
-  }
 
   return (
     <Card sx={{ padding: '0px !important' }}>
@@ -44,10 +37,6 @@ const Status = () => {
         spacing={2}
         sx={{ backgroundColor: '#f2f8fb', padding: '35px', minHeight: '400px' }}
       >
-        {/* {SERVICES.map(item => (
-          <li key={item.id}>{item.value}</li>
-        ))} */}
-
         {SERVICES.map(service => (
           <>
             <span key={service}>{service.value}</span>
@@ -58,11 +47,6 @@ const Status = () => {
             </div>
           </>
         ))}
-
-        {/* <DisplayStatus labelName={'API'} />
-        <DisplayStatus labelName={'Dashboard'} />
-        <DisplayStatus labelName={'Stripe.js'} />
-        <DisplayStatus labelName={'Checkout.js'} /> */}
       </Stack>
     </Card>
   );
