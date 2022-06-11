@@ -26,40 +26,40 @@ export const theme = responsiveFontSizes(
   //     main: '#ab3c3c',
   //   },
   // },
-  // typography: {
-  //   fontSize: 16,
-  //   fontFamily: 'Aeroport',
-  //   fontWeightLight: 300,
-  //   fontWeightRegular: 400,
-  //   fontWeightMedium: 500,
-  //   fontWeightBold: 700,
-  //   rating: {
-  //     color: colors.sepia,
-  //     fontFamily: 'Aeroport',
-  //     fontSize: '2.5em',
-  //     marginRight: '10px',
-  //   },
-  //   h1: {
-  //     fontSize: '80px',
-  //   },
-  //   h2: {
-  //     fontSize: '72px',
-  //     lineHeight: '0.95',
-  //   },
-  //   h3: { fontSize: '48px' },
-  //   h4: { fontSize: '36px' },
-  //   h5: { fontSize: '28px' },
-  //   h6: { fontSize: '22px' },
-  //   subtitle1: {
-  //     fontSize: '18px',
-  //   },
-  //   subtitle2: {
-  //     fontSize: '20px',
-  //   },
-  //   body1: { fontSize: '16px' },
-  //   body2: { fontSize: '14px' },
-  //   caption: { fontSize: '12px' },
-  // },
+  typography: {
+   fontSize: 16,
+   fontFamily: 'Poppins',
+   fontWeightLight: 300,
+   fontWeightRegular: 400,
+   fontWeightMedium: 500,
+   fontWeightBold: 700,
+   //    rating: {
+   //     color: colors.sepia,
+   //     fontFamily: 'Poppins',
+   //     fontSize: '2.5em',
+   //     marginRight: '10px',
+   //    },
+   h1: {
+    fontSize: '80px',
+   },
+   h2: {
+    fontSize: '72px',
+    lineHeight: '0.95',
+   },
+   h3: { fontSize: '48px' },
+   h4: { fontSize: '36px' },
+   h5: { fontSize: '25px' },
+   h6: { fontSize: '22px' },
+   subtitle1: {
+    fontSize: '18px',
+   },
+   subtitle2: {
+    fontSize: '20px',
+   },
+   body1: { fontSize: '16px' },
+   body2: { fontSize: '14px' },
+   caption: { fontSize: '12px' },
+  },
   breakpoints: {
    values: {
     xs: 0,
@@ -68,7 +68,6 @@ export const theme = responsiveFontSizes(
     lg: 1456,
     xl: 1600,
    },
-   step: 8,
   },
   // spacing: 8,
   // components: {
