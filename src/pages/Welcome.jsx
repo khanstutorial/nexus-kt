@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Header from '../components/Header/Header';
 
 const Welcome = () => {
-  return (
-    <div>Content from Welcome Page</div>
-  )
-}
+  return <></>;
+};
 
-export default Welcome
+export default Welcome;
