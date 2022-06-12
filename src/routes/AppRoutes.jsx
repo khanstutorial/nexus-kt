@@ -9,14 +9,14 @@ import Profile from '../pages/Profile';
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route
+      {/* <Route
         path="/"
         element={
           <Layout>
             <Status />
           </Layout>
         }
-      />
+      /> */}
       <Route path="/" element={<Status />} />
       <Route path="/login" element={<Login />} />
       <Route path="/profile/:username" element={<Profile />} />
