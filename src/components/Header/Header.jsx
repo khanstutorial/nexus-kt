@@ -54,6 +54,7 @@ const Header = props => {
             backgroundColor: '#58a8dc',
             color: 'white',
             borderRadius: '10px',
+            cursor: 'pointer',
           }}
         >
           Login

@@ -22,6 +22,7 @@ const CustomPopover = ({ label, options }) => {
         fontWeight="fontWeightBold"
         aria-describedby={id}
         onClick={handleClick}
+        sx={{ cursor: 'pointer' }}
       >
         {label}
       </Typography>
@@ -36,13 +37,23 @@ const CustomPopover = ({ label, options }) => {
           horizontal: 'left',
         }}
       >
-        {options.map(opt => {
-          return (
-            <Typography key={opt} sx={{ p: 2 }}>
-              {opt}
-            </Typography>
-          );
-        })}
+        <div
+          name="saqib"
+          style={{
+            backgroundColor: '#2151A1',
+            opacity: '75%',
+            color: 'white',
+            padding: '20px',
+          }}
+        >
+          {options.map(opt => {
+            return (
+              <Typography key={opt} variant="h5" fontWeight={'fontWeightBold'}>
+                {opt}
+              </Typography>
+            );
+          })}
+        </div>
       </Popover>
     </div>
   );
