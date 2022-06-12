@@ -10,11 +10,7 @@ import KTLogoPNG from './../assets/images/KTLogoPNG.png';
 
 const DefaultLayout = ({ children }) => {
   return (
-    <Box
-      minHeight="100%"
-      position={'relative'}
-      style={{ border: '1px solid', margin: 0 }}
-    >
+    <Box minHeight="100%" position={'relative'}>
       <Header name={'KT '} content={'system status'} />
       <Box
         sx={{

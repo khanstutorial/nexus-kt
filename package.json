@@ -2,6 +2,7 @@
   "name": "react-app",
   "version": "0.0.1",
   "dependencies": {
+    "@svgr/webpack": "^6.2.1",
     "babel-preset-react": "^6.24.1",
     "moment": "^2.29.3",
     "react": "latest",
