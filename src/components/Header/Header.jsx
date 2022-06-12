@@ -2,16 +2,14 @@ import React from 'react';
 import { Typography, Box } from '@mui/material';
 import { Grid } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import CustomPopover from '../../features/CustomPopover/CustomPopover';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { Variant } from '@mui/material/styles/createTypography';
 
 // import KT from './../../assets/images/svgs/KTLogo';
 import favicon from './../../assets/images/favicon.png';
 
 const Header = props => {
   const theme = useTheme();
-  // To check for the breakpoint to occur - Mobile Responsive
-  // const isSmall = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
     <Grid
@@ -28,19 +26,13 @@ const Header = props => {
         ></img>
       </Grid>
       <Grid item xs={1.5} md={1.5}>
-        <Typography variant="h5" fontWeight="fontWeightBold">
-          Section 1
-        </Typography>
+        <CustomPopover label={'Section 1'} options={['Option-1', 'Option-2']} />
       </Grid>
       <Grid item xs={1.5} md={1.5}>
-        <Typography variant="h5" fontWeight="fontWeightBold">
-          Section 2
-        </Typography>
+        <CustomPopover label={'Section 2'} options={['Option-1', 'Option-2']} />
       </Grid>
       <Grid item xs={1.5} md={1.5}>
-        <Typography variant="h5" fontWeight="fontWeightBold">
-          Section 3
-        </Typography>
+        <CustomPopover label={'Section 3'} options={['Option-1', 'Option-2']} />
       </Grid>
       <Grid item xs={1.5} md={1}>
         <Typography
