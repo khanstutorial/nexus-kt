@@ -3,6 +3,7 @@ import { Typography, Box } from '@mui/material';
 import { Grid } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import CustomPopover from '../../features/CustomPopover/CustomPopover';
+import { SECTIONS } from '../../constants';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 // import KT from './../../assets/images/svgs/KTLogo';
@@ -10,6 +11,7 @@ import favicon from './../../assets/images/favicon.png';
 
 const Header = props => {
   const theme = useTheme();
+  console.log(SECTIONS);
 
   return (
     <Grid
@@ -25,15 +27,23 @@ const Header = props => {
           style={{ paddingTop: '15px', paddingBottom: '15px' }}
         ></img>
       </Grid>
-      <Grid item xs={1.5} md={1.5}>
+      {SECTIONS.map(section => {
+        return (
+          <Grid item xs={1.5} key={section.id} md={1.5}>
+            <CustomPopover label={section.name} options={section.options} />
+          </Grid>
+        );
+      })}
+
+      {/* <Grid item xs={1.5} md={1.5}>
         <CustomPopover label={'Section 1'} options={['Option-1', 'Option-2']} />
-      </Grid>
-      <Grid item xs={1.5} md={1.5}>
+      </Grid> */}
+      {/* <Grid item xs={1.5} md={1.5}>
         <CustomPopover label={'Section 2'} options={['Option-1', 'Option-2']} />
       </Grid>
       <Grid item xs={1.5} md={1.5}>
         <CustomPopover label={'Section 3'} options={['Option-1', 'Option-2']} />
-      </Grid>
+      </Grid> */}
       <Grid item xs={1.5} md={1}>
         <Typography
           variant="h5"

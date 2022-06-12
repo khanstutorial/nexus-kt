@@ -68,6 +68,7 @@ export const theme = responsiveFontSizes(
     lg: 1456,
     xl: 1600,
    },
+   step: 4,
   },
   // spacing: 8,
   // components: {
