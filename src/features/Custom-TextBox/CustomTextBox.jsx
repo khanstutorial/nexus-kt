@@ -1,10 +1,19 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 
-const CustomTextBox = ({ content }) => {
+const CustomTextBox = ({
+  content,
+  bgColor = 'white',
+  fontWeight = 'fontWeightRegular',
+  textAlign = 'left',
+}) => {
   return (
     <>
-      <Typography sx={{ padding: '50px', backgroundColor: 'white' }}>
+      <Typography
+        fontWeight={fontWeight}
+        textAlign={textAlign}
+        sx={{ padding: '50px', backgroundColor: bgColor }}
+      >
         {content}
       </Typography>
     </>

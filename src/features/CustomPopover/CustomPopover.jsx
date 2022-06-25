@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Popover, Typography, Button } from '@mui/material';
 
-const CustomPopover = ({ label, options }) => {
+const CustomPopover = ({ label, options, key }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = event => {
@@ -19,6 +19,7 @@ const CustomPopover = ({ label, options }) => {
     <div>
       <Typography
         variant="h5"
+        key={key}
         fontWeight="fontWeightBold"
         aria-describedby={id}
         onClick={handleClick}
@@ -30,6 +31,7 @@ const CustomPopover = ({ label, options }) => {
       <Popover
         id={id}
         open={open}
+        key={key}
         anchorEl={anchorEl}
         onClose={handleClose}
         anchorOrigin={{
@@ -38,7 +40,6 @@ const CustomPopover = ({ label, options }) => {
         }}
       >
         <div
-          name="saqib"
           style={{
             backgroundColor: '#2151A1',
             opacity: '75%',

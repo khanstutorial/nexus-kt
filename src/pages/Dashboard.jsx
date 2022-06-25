@@ -6,7 +6,7 @@ import CustomTextBox from '../features/Custom-TextBox/CustomTextBox';
 
 const Dashboard = () => {
   return (
-    <Grid container>
+    <Grid container sx={{ paddingLeft: '44px', paddingRight: '44px' }}>
       <Grid
         item
         xs={4}
@@ -25,7 +25,7 @@ const Dashboard = () => {
         spacing={2}
         direction="column"
         alignItems="center"
-        xs={6}
+        xs={6.5}
         sx={{
           border: '1px solid',
           borderRadius: '10px',

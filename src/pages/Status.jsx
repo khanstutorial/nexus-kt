@@ -13,11 +13,11 @@ const Status = () => {
 
   const data = [
     1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0,
-    1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1,
+    1, 1, 1, 1, 0,
   ];
 
   return (
-    <>
+    <div style={{ paddingBottom: '5px' }}>
       <Box sx={{ padding: '0 36px' }}>
         <Box sx={{ padding: '50px 0px' }}>
           <CircleIcon
@@ -43,17 +43,31 @@ const Status = () => {
         }}
       >
         {SERVICES.map(service => (
-          <>
+          <div
+            style={{
+              textAlign: 'center',
+              paddingTop: '15px',
+              paddingBottom: '20px',
+            }}
+          >
             <span key={service}>{service.value}</span>
-            <div key={service} sx={{ display: 'flex', flexDirection: 'row' }}>
+            <div
+              key={service}
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                paddingTop: '20px',
+              }}
+            >
               {data.map(number => (
                 <UptimeGraphBar value={number} />
               ))}
             </div>
-          </>
+          </div>
         ))}
       </Stack>
-    </>
+    </div>
   );
 };
 

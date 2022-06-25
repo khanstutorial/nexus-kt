@@ -9,14 +9,16 @@ const Profile = () => {
       <Box
         sx={{
           width: '100%',
-          marginTop: '10%',
-          paddingBottom: '20px',
+          marginTop: '5%',
+          marginBottom: '5%',
           textAlign: 'center',
           minHeight: '100%',
           backgroundColor: 'white',
         }}
       >
-        <Typography variant="h5">Personal Profile</Typography>
+        <Typography variant="h5" sx={{ backgroundColor: '#F5F5F5' }}>
+          Personal Profile
+        </Typography>
       </Box>
       <Card sx={{ padding: '35px' }}>
         <Grid container spacing={2}>

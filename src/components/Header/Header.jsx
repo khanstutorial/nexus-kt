@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { Typography, Box } from '@mui/material';
 import { Grid } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -11,7 +12,7 @@ import favicon from './../../assets/images/favicon.png';
 
 const Header = props => {
   const theme = useTheme();
-  console.log(SECTIONS);
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   return (
     <Grid
@@ -29,36 +30,60 @@ const Header = props => {
       </Grid>
       {SECTIONS.map(section => {
         return (
-          <Grid item xs={1.5} key={section.id} md={1.5}>
-            <CustomPopover label={section.name} options={section.options} />
+          <Grid item xs={1.5} md={1.5}>
+            <CustomPopover
+              key={section.id}
+              label={section.name}
+              options={section.options}
+            />
           </Grid>
         );
       })}
-
-      {/* <Grid item xs={1.5} md={1.5}>
-        <CustomPopover label={'Section 1'} options={['Option-1', 'Option-2']} />
-      </Grid> */}
-      {/* <Grid item xs={1.5} md={1.5}>
-        <CustomPopover label={'Section 2'} options={['Option-1', 'Option-2']} />
-      </Grid>
-      <Grid item xs={1.5} md={1.5}>
-        <CustomPopover label={'Section 3'} options={['Option-1', 'Option-2']} />
-      </Grid> */}
       <Grid item xs={1.5} md={1}>
-        <Typography
-          variant="h5"
-          fontWeight="fontWeightBold"
-          sx={{
-            border: '1px solid',
-            textAlign: 'center',
-            backgroundColor: '#58a8dc',
-            color: 'white',
-            borderRadius: '10px',
-            cursor: 'pointer',
-          }}
-        >
-          Login
-        </Typography>
+        {isLoggedIn ? (
+          <Typography
+            variant="h5"
+            fontWeight="fontWeightBold"
+            sx={{
+              border: '1px solid',
+              textAlign: 'center',
+              backgroundColor: '#58a8dc',
+              color: 'white',
+              borderRadius: '10px',
+              cursor: 'pointer',
+            }}
+          >
+            Login
+          </Typography>
+        ) : (
+          <>
+            {/* <img
+              src={favicon}
+              alt="Avatar"
+              style={{
+                border: '1px solid',
+                borderRadius: '50%',
+                paddingRight: '5px',
+              }}
+              /> */}
+            {/* <div
+              style={{
+                backgroundColor: '#c49393',
+                border: '1px solid',
+                borderRadius: '50%',
+                paddingRight: '5px',
+                width: '50px',
+                height: '50px',
+              }}
+              >
+                 <CustomPopover
+              key={''}
+              label={section.name}
+              options={section.options}
+            />
+            </div> */}
+          </>
+        )}
       </Grid>
     </Grid>
   );
