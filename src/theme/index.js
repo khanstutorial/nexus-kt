@@ -31,8 +31,8 @@ export const theme = responsiveFontSizes(
    fontFamily: 'Poppins',
    fontWeightLight: 300,
    fontWeightRegular: 400,
-   fontWeightMedium: 500,
-   fontWeightBold: 700,
+   fontWeightMedium: 600,
+   fontWeightBold: 900,
    //    rating: {
    //     color: colors.sepia,
    //     fontFamily: 'Poppins',

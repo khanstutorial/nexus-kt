@@ -17,13 +17,13 @@ const DefaultLayout = ({ children }) => {
           width: '100%',
           paddingTop: '5px',
           paddingBottom: '20px',
-          minHeight: '100px',
+          minHeight: 'fit-content',
           backgroundColor: '#F5F5F5',
         }}
       >
         {children}
       </Box>
-      <Footer />
+      {/* <Footer /> */}
     </Box>
   );
 };

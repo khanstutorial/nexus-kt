@@ -2,7 +2,7 @@ import React from 'react';
 
 const UptimeGraphBar = props => {
   return (
-    <>
+    <div>
       {props.value == 1 ? (
         <div
           style={{
@@ -22,7 +22,7 @@ const UptimeGraphBar = props => {
           }}
         ></div>
       )}
-    </>
+    </div>
   );
 };
 
