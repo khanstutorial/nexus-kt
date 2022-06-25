@@ -12,9 +12,17 @@ Khan's Tutorial has a lot of systems and features that are kind of scattered thr
 
 Nexus aims to be the one-stop company website for KT (hence the name) that should allow users access to other platforms as well as managing classes. This means that you should be able to sign into Nexus, redirect a class, view the current status of our servers and then hop onto the Admin portal within the same session.
 
-Nexus ultimately serves two main groups of people - KT Staff and KT Developers. Staff features are those features that have been developed solely for use by managers, including feature such as redirecting classes, blocking IP adresses, etc. The features that the Developers should have access to should encompass the packages built within the automation repo, such as automatically creating and destroying classes. That is to say, we should now be able to create a class with the click of a button, without needing to run ode on the terminal.  
+Nexus ultimately serves two main groups of people - KT Staff and KT Developers. Staff features are those features that have been developed solely for use by managers, including feature such as redirecting classes, blocking IP addresses, etc. The features that the Developers should have access to should encompass the packages built within the automation repo, such as automatically creating and destroying classes. That is to say, we should now be able to create a class with the click of a button, without needing to run ode on the terminal.  
 
 Nexus serves as the hub of Khans Tutorial and it should also have functionality that reflects that as well. Both groups should have features like the Internal Staff Forum, Support Tickets, etc.
+
+## Pitch 
+
+* Nexus - an internal company website where KT Staff and Developers are able to administer internal operations 
+  * Beholden to other stakeholders (with no communication)
+  * Cloud of features that have no path to each other 
+  * Environment limitations 
+  * Security Concerns (especially updating and storing sensitive) 
 
 ## Employee Journey
 
