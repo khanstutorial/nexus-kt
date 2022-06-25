@@ -4,7 +4,7 @@ import { Typography, Box } from '@mui/material';
 import { Grid } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import CustomPopover from '../../features/CustomPopover/CustomPopover';
-import { SECTIONS } from '../../constants';
+import { SECTIONS, AFTER_LOGIN } from '../../constants';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 // import KT from './../../assets/images/svgs/KTLogo';
@@ -13,6 +13,11 @@ import favicon from './../../assets/images/favicon.png';
 const Header = props => {
   const theme = useTheme();
   const [isLoggedIn, setLoggedIn] = useState(false);
+
+  function showProfileOptions(e) {
+    e.preventDefault();
+    console.log('hnfksnjfkasf');
+  }
 
   return (
     <Grid
@@ -74,14 +79,16 @@ const Header = props => {
                 paddingRight: '5px',
                 width: '50px',
                 height: '50px',
+                cursor: 'pointer',
               }}
-              >
-                 <CustomPopover
-              key={''}
-              label={section.name}
-              options={section.options}
+              onClick={showProfileOptions}
+            /> */}
+            <CustomPopover
+              key={'profileIcon'}
+              label={'profile'}
+              options={AFTER_LOGIN}
             />
-            </div> */}
+            {/* </div> */}
           </>
         )}
       </Grid>

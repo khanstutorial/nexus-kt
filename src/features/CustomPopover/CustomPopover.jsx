@@ -17,17 +17,31 @@ const CustomPopover = ({ label, options, key }) => {
 
   return (
     <div>
-      <Typography
-        variant="h5"
-        key={key}
-        fontWeight="fontWeightBold"
-        aria-describedby={id}
-        onClick={handleClick}
-        sx={{ cursor: 'pointer' }}
-      >
-        {label}
-      </Typography>
-
+      {label != 'profile' ? (
+        <Typography
+          variant="h5"
+          key={key}
+          fontWeight="fontWeightBold"
+          aria-describedby={id}
+          onClick={handleClick}
+          sx={{ cursor: 'pointer' }}
+        >
+          {label}
+        </Typography>
+      ) : (
+        <div
+          onClick={handleClick}
+          style={{
+            backgroundColor: '#c49393',
+            border: '1px solid',
+            borderRadius: '50%',
+            paddingRight: '5px',
+            width: '50px',
+            height: '50px',
+            cursor: 'pointer',
+          }}
+        />
+      )}
       <Popover
         id={id}
         open={open}

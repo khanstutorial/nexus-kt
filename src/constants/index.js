@@ -39,4 +39,5 @@ const SECTIONS = [
  },
 ];
 
-export { SERVICES, SECTIONS };
+const AFTER_LOGIN = ['User Name', 'Job Title', 'Department'];
+export { SERVICES, SECTIONS, AFTER_LOGIN };
