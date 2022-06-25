@@ -16,7 +16,6 @@ const Header = props => {
 
   function showProfileOptions(e) {
     e.preventDefault();
-    console.log('hnfksnjfkasf');
   }
 
   return (
@@ -62,27 +61,6 @@ const Header = props => {
           </Typography>
         ) : (
           <>
-            {/* <img
-              src={favicon}
-              alt="Avatar"
-              style={{
-                border: '1px solid',
-                borderRadius: '50%',
-                paddingRight: '5px',
-              }}
-              /> */}
-            {/* <div
-              style={{
-                backgroundColor: '#c49393',
-                border: '1px solid',
-                borderRadius: '50%',
-                paddingRight: '5px',
-                width: '50px',
-                height: '50px',
-                cursor: 'pointer',
-              }}
-              onClick={showProfileOptions}
-            /> */}
             <CustomPopover
               key={'profileIcon'}
               label={'profile'}

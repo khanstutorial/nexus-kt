@@ -25,17 +25,17 @@ const SECTIONS = [
  {
   id: 'Section-1',
   name: 'Section 1',
-  options: ['Option 1', 'Option 2', 'Option 3', 'Option 4'],
+  options: ['Option 1a', 'Option 2a', 'Option 3a', 'Option 4a'],
  },
  {
   id: 'Section-2',
   name: 'Section 2',
-  options: ['Option 1', 'Option 2', 'Option 3', 'Option 4'],
+  options: ['Option 1b', 'Option 2b', 'Option 3b', 'Option 4b'],
  },
  {
   id: 'Section-3',
   name: 'Section 3',
-  options: ['Option 1', 'Option 2', 'Option 3', 'Option 4'],
+  options: ['Option 1c', 'Option 2c', 'Option 3c', 'Option 4c'],
  },
 ];
 
