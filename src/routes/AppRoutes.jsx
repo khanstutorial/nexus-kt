@@ -6,6 +6,7 @@ import Profile from '../pages/Profile';
 import Dashboard from '../pages/Dashboard';
 import About from '../pages/About';
 import ContactUs from '../pages/ContactUs';
+import BugReport from '../pages/BugReport';
 import Footer from '../components/Footer/Footer';
 
 const AppRoutes = () => {
@@ -15,7 +16,7 @@ const AppRoutes = () => {
       <Route path="/login" element={<Login />} />
       {/* to be deleted */}
       <Route path="/footer" element={<Footer />} />
-
+      <Route path="/bug-report" element={<BugReport />} />
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/profile/:username" element={<Profile />} />
       <Route path="/welcome" element={<Welcome />} />
