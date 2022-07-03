@@ -42,14 +42,19 @@ const CustomInput = ({
         </Box>
       ) : (
         <>
-          <TextField
-            maxRows={4}
-            id={id}
-            multiline
-            name={name}
-            value={value}
-            type={type}
-          />
+          {type == "upload" ?
+            <input type="file" />
+            :
+            <TextField
+              maxRows={4}
+              id={id}
+              multiline
+              name={name}
+              value={value}
+              type={type}
+            />
+          }
+
         </>
       )}
     </Stack>
