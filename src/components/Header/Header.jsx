@@ -65,8 +65,8 @@ const Header = props => {
                 borderRadius: '50%',
                 paddingRight: '5px',
               }}
-              /> */}
-            {/* <div
+            />
+            <div
               style={{
                 backgroundColor: '#c49393',
                 border: '1px solid',
@@ -75,12 +75,12 @@ const Header = props => {
                 width: '50px',
                 height: '50px',
               }}
-              >
-                 <CustomPopover
-              key={''}
-              label={section.name}
-              options={section.options}
-            />
+            >
+              <CustomPopover
+                key={''}
+                label={section.name}
+                options={section.options}
+              />
             </div> */}
           </>
         )}

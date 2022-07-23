@@ -1,14 +1,24 @@
 import * as React from 'react';
 import { Popover, Typography, Button } from '@mui/material';
+import './style.css'
 
 const CustomPopover = ({ label, options, key }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = event => {
+  // const handleClick = event => {
+  //   console.log("oyeee");
+  //   setAnchorEl(event.currentTarget);
+  // };
+
+  // const handleClose = () => {
+  //   setAnchorEl(null);
+  // };
+
+  const handlePopoverOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handlePopoverClose = () => {
     setAnchorEl(null);
   };
 
@@ -20,22 +30,31 @@ const CustomPopover = ({ label, options, key }) => {
       <Typography
         variant="h5"
         key={key}
+        className="section"
         fontWeight="fontWeightBold"
-        aria-describedby={id}
-        onClick={handleClick}
-        sx={{ cursor: 'pointer' }}
+        aria-owns={open ? 'mouse-over-popover' : undefined}
+        aria-haspopup="true"
+        onMouseEnter={handlePopoverOpen}
+        onMouseLeave={handlePopoverClose}
       >
         {label}
       </Typography>
 
       <Popover
-        id={id}
+        id="mouse-over-popover"
+        sx={{
+          pointerEvents: 'none',
+        }}
         open={open}
-        key={key}
         anchorEl={anchorEl}
-        onClose={handleClose}
+        onClose={handlePopoverClose}
+        disableRestoreFocus
         anchorOrigin={{
           vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        transformOrigin={{
+          vertical: 'top',
           horizontal: 'left',
         }}
       >

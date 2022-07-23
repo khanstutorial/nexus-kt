@@ -1,0 +1,10 @@
+.section {
+    cursor: pointer;
+
+}
+
+.section:hover {
+    text-decoration: underline;
+    text-decoration-color: rgba(33, 81, 161, 0.75);
+    text-decoration-thickness: 20%;
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Welcome from '../pages/Welcome';
 import Login from '../pages/Login';
@@ -11,17 +11,19 @@ import Footer from '../components/Footer/Footer';
 
 const AppRoutes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/login" element={<Login />} />
-      {/* to be deleted */}
-      <Route path="/footer" element={<Footer />} />
-      <Route path="/bug-report" element={<BugReport />} />
-      <Route path="/contact" element={<ContactUs />} />
-      <Route path="/profile/:username" element={<Profile />} />
-      <Route path="/welcome" element={<Welcome />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
+        {/* to be deleted */}
+        <Route path="/footer" element={<Footer />} />
+        <Route path="/bug-report" element={<BugReport />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/profile/:username" element={<Profile />} />
+        <Route path="/welcome" element={<Welcome />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Suspense>
   );
 };
 
