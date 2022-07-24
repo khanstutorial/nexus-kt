@@ -5,21 +5,17 @@ import Stack from '@mui/material/Stack';
 import { Grid } from '@mui/material';
 import Container from '@mui/material/Container';
 import Header from '../components/Header/Header';
+import Title from '../components/Title/Title';
 import Footer from '../components/Footer/Footer';
 import KTLogoPNG from './../assets/images/KTLogoPNG.png';
 
 const DefaultLayout = ({ children }) => {
   return (
-    <Box minHeight="100%" position={'relative'}>
+    <Box minHeight="100%" position={'relative'} area-label="root container">
       <Header name={'KT '} content={'system status'} />
+      {/* <Title /> */}
       <Box
-        sx={{
-          width: '100%',
-          paddingTop: '5px',
-          paddingBottom: '20px',
-          minHeight: 'fit-content',
-          backgroundColor: '#F5F5F5',
-        }}
+
       >
         {children}
       </Box>

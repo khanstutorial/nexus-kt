@@ -23,7 +23,7 @@ const CustomInput = ({
     <Stack spacing={0.75}>
       {label && (
         <Typography
-          variant="body1"
+          variant="h6"
           color={'blue'}
           fontWeight="fontWeightMedium"
         >

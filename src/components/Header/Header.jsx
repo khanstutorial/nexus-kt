@@ -19,14 +19,15 @@ const Header = props => {
     <Grid
       container
       alignItems="center"
-      justifyContent="flex-end"
-      paddingRight={'15px'}
+      justifyContent="flex-start"
+      marginLeft='100px'
+      marginRight='100px'
+      width='unset !important'
       direction={'row'}
     >
       <Grid item md={6}>
-        <img
+        <img height='100px'
           src={favicon}
-          style={{ paddingTop: '15px', paddingBottom: '15px' }}
         ></img>
       </Grid>
       {SECTIONS.map(section => {
