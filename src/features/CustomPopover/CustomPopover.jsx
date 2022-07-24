@@ -6,7 +6,6 @@ const CustomPopover = ({ label, options, key }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   // const handleClick = event => {
-  //   console.log("oyeee");
   //   setAnchorEl(event.currentTarget);
   // };
 
@@ -27,18 +26,32 @@ const CustomPopover = ({ label, options, key }) => {
 
   return (
     <div>
-      <Typography
-        variant="h5"
-        key={key}
-        className="section"
-        fontWeight="fontWeightBold"
-        aria-owns={open ? 'mouse-over-popover' : undefined}
-        aria-haspopup="true"
-        onMouseEnter={handlePopoverOpen}
-        onMouseLeave={handlePopoverClose}
-      >
-        {label}
-      </Typography>
+      {/* <h3>{label}</h3> */}
+      {label != 'image' ?
+        <Typography
+          variant="h5"
+          key={key}
+          className="section"
+          fontWeight="fontWeightBold"
+          aria-owns={open ? 'mouse-over-popover' : undefined}
+          aria-haspopup="true"
+          onMouseEnter={handlePopoverOpen}
+          onMouseLeave={handlePopoverClose}
+        >
+          {label}
+        </Typography>
+        :
+        <div
+          style={{
+            backgroundColor: '#959FFF',
+            border: '1px solid',
+            borderRadius: '50%',
+            paddingRight: '5px',
+            width: '50px',
+            height: '50px',
+          }}
+        />
+      }
 
       <Popover
         id="mouse-over-popover"

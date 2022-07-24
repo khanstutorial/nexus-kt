@@ -20,7 +20,7 @@ const AppRoutes = () => {
         <Route path="/bug-report" element={<BugReport />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/profile/:username" element={<Profile />} />
-        <Route path="/welcome" element={<Welcome />} />
+        {/* <Route path="/welcome" element={<Welcome />} /> */}
         <Route path="/about" element={<About />} />
       </Routes>
     </Suspense>

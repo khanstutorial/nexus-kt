@@ -13,6 +13,7 @@ import favicon from './../../assets/images/favicon.png';
 const Header = props => {
   const theme = useTheme();
   const [isLoggedIn, setLoggedIn] = useState(false);
+  const optionsH = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
 
   return (
     <Grid
@@ -65,23 +66,23 @@ const Header = props => {
                 borderRadius: '50%',
                 paddingRight: '5px',
               }}
-            />
-            <div
+            /> */}
+            {/* <div
               style={{
-                backgroundColor: '#c49393',
+                backgroundColor: '#959FFF',
                 border: '1px solid',
                 borderRadius: '50%',
                 paddingRight: '5px',
                 width: '50px',
                 height: '50px',
               }}
-            >
-              <CustomPopover
-                key={''}
-                label={section.name}
-                options={section.options}
-              />
-            </div> */}
+            > */}
+            <CustomPopover
+              key={'234'}
+              label={"image"}
+              options={optionsH}
+            />
+            {/* </div> */}
           </>
         )}
       </Grid>
